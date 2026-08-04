@@ -28,6 +28,6 @@ public class peakinamountain {
                 right = mid - 1;
             }
         }
-        System.out.println(idxw);
+        System.out.println(idx);
     }
 }

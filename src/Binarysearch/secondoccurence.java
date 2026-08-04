@@ -8,13 +8,14 @@ public class secondoccurence {
         int right=n-1;
         int target=8;
         int idx= -1;
-        int firstidx=-1;
+        int secondidx=-1;
+
         while(left<=right){
             int mid = (left+right)/2;
 
             if(arr[mid]==target){
+                secondidx=mid;
                 left=mid+1;
-                firstidx=mid;
             } else if (arr[mid]<target) {
                 left=mid+1;
             } else if (arr[mid]>target) {
@@ -22,6 +23,6 @@ public class secondoccurence {
             }
 
         }
-        System.out.println(firstidx);
+        System.out.println(secondidx);
     }
 }
