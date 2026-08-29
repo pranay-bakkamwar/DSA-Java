@@ -16,7 +16,7 @@ class COLLAGE {
 
     //setters
     void setRollno(int x){
-        rollno=x;                               //here is used a setter
+        this.rollno=x;                               //here is used a setter
     }
 }
 

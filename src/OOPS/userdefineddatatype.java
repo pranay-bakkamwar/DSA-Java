@@ -28,6 +28,9 @@ public class userdefineddatatype {
         s3.cgpa=8.8;
         s3.Department="BAogy";
 
+        Students s5;
+
+
         System.out.println(s1.name);
         System.out.println(s2.name);
         System.out.println(s3.name);
