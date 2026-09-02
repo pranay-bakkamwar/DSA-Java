@@ -14,9 +14,6 @@ public class StaticKeyword {
         x = 15;
 
         Student s1=new Student();
-
-
-
     }
 }
 

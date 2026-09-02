@@ -9,8 +9,9 @@ class COLLAGE {
     //here comes the concept of GETTERS AND SETTERS
     //creating a Method Into the Class TO Access The Roll no USING GETTERS;
 
-    void getRollNo(){
-        System.out.println(rollno);
+    int getRollNo(){
+    return rollno;
+
     }
 
 
@@ -33,11 +34,11 @@ public class PrivateKeyWord {
 
 
         //there is a way to access it that are getters
-        s1.getRollNo();;              // this is the way i can access my roll no
+        s1.getRollNo();            // this is the way i can access my roll no
 
         //if i wanted to set my roll no so we can use setetrs as well to set the no ;
         s1.setRollno(51);
-        s1.getRollNo();
+        System.out.println(s1.getRollNo());
     }
 
 }

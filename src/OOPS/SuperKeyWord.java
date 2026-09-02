@@ -11,7 +11,7 @@ class Horse extends Animal{
 
     Horse(){
         super();
-        System.out.println("hello this is bear");
+        System.out.println(" bear");
     }
 }
 
