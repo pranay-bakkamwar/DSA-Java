@@ -44,6 +44,7 @@ class linkedlist {
                 tail = null;
                 size--;
             }
+            size--;
         }
     }
     void display() {
@@ -75,7 +76,6 @@ class linkedlist {
         }
         return temp.val;
     }
-
     public int search(int i) {
         Node temp=head;
         int idx=0;
@@ -89,6 +89,44 @@ class linkedlist {
         return -1;
 
     }
+    void insert(int val, int idx) {
+        if (idx>size||idx<0) {
+            System.out.println("this is invalid index");
+            return;
+        }
+        if(idx==size)addtail(val);
+        if (idx==0)addhead(val);
+
+    Node temp =head;
+
+        for (int i=1;i<=idx-1;i++){
+            temp=temp.next;
+        }
+        Node t=new Node(val);
+        t.next=temp.next;
+        temp.next=t;
+        size++;
+    }
+    public void delete(int idx) {
+         if (idx<0||idx>=size){
+             System.out.println("invalid index");
+             return;
+         }
+        if (idx==0){
+            deletefromhead();
+            return;
+        }
+
+        Node temp =head;
+        for(int i = 1; i <= idx-1 ;i++) {
+            temp=temp.next;
+        }
+        temp.next=temp.next.next;
+        if(idx==size-1)tail=temp;
+        size--;
+    }
+
+
 }
 
 public class OwnLinkedList {
@@ -100,9 +138,10 @@ public class OwnLinkedList {
         System.out.println("initialization");
         l1.addhead(10);
         l1.addtail(20);
-        l1.addtail(30);
         l1.addtail(40);
         l1.addtail(50);
+        l1.addtail(60);
+        l1.insert(30,2);
 
 /*
         System.out.println("display in progress");
@@ -124,8 +163,15 @@ public class OwnLinkedList {
         System.out.println(l1.get(3)); // Output: 40
         System.out.println(l1.size);
 
-*/
         System.out.println(l1.search(10));
 
+        //inserting element
+        l1.insert(30,-1);
+
+*/
+
+
+        l1.delete(3);
+        l1.display();
     }
 }
