@@ -1,12 +1,5 @@
 package Binary_Trees;
-class Node{
-    int val;
-    Node left ;
-    Node right ;
-    Node (int val){
-        this.val=val;
-    }
-}
+
 public class minoftree {
     public static void main(String[] args){
         Node a=new Node(3);
